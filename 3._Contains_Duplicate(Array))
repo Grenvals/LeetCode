@@ -1,0 +1,11 @@
+var containsDuplicate = function(nums) {
+	const store = {};
+	for (let el of nums) {
+		if(store.hasOwnProperty(el)) {
+			return true;
+		} else {
+            store[el] = 1;
+        }
+	}
+	return false;
+};
